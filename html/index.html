@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>digDef</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css" id="changeable_styles"></link>
+	<script> 
+		function setCookie(a,b,c){
+			if(c){var d=new Date();
+				d.setTime(d.getTime()+(c*24*60*60*1000));
+				var e="; expires="+d.toGMTString()
+			}
+			else var e="";
+			document.cookie=a+"="+b+e+"; path=/"
+		};
+		function getCookie(a)
+		{
+			var b=a+"=";
+			var d=document.cookie.split(';');
+			for(var i=0;i<d.length;i++)
+				{
+					var c=d[i];while(c.charAt(0)==' ')c=c.substring(1,c.length);
+					if(c.indexOf(b)==0)return c.substring(b.length,c.length)
+				}
+			return null
+		};
+		function eraseCookie(a){
+			setCookie(a,"",-1)
+		}; 
+	</script>
+</head>
+</head>
+<body>
+	<div id="sidebar">
+		<ul>
+			<li>Меню</li>
+			<input class="btn2" type="button" onclick="setCookie('color_of_style', 'css/main.css', 365); document.getElementById('changeable_styles').href = '../css/main.css';" value="Тёмная тема"><br>
+			<input class="btn2" type="button" onclick="setCookie('color_of_style', 'css/light.css', 365); document.getElementById('changeable_styles').href = '../css/light.css';" value="Светлая тема">
+		</ul>
+	</div>
+	<header>
+		<div class="toggle-btn" onclick="openMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>		
+		<div id="logo" onclick="slowScroll('#top')">
+			<span>digDef</span>
+		</div>
+		<div id="about">
+			<a href="#" title="Новости" onclick="slowScroll('#main')">Новости</a>
+			<a href="#" onclick="slowScroll('#contacts')" title="Контакты">Связь</a>
+			<a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+		</div>
+	</header>
+	<div id="main">
+		<div class="intro">
+			<h2>Текст</h2>
+			<img src="../img/qwe.jpg" >
+		</div>
+		<div class="text">
+			<span>
+				Зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.Существуют две основные трактовки понятия «текст»: имманентная (расширенная, философски нагруженная) и репрезентативная (более частная).Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры.Репрезентативный — рассмотрение текста как особой формы представления знаний о внешней тексту действительности.В лингвистике термин «текст» используется в широком значении, включая и образцы устной речи.Восприятие текста изучается в рамках лингвистики текста и психолингвистики.Так, например, И. Р. Гальперин определяет текст следующим образом: «это письменное сообщение,объективированное в виде письменного документа, состоящее из ряда высказываний, объединённых разными типами лексической, грамматической и логической связи, имеющее определённый моральный характер, прагматическую установку и соответственно литературно обработанное»
+			</span>
+			<div class="article"><br>
+				<a href="article.php">Подробнее</a>
+			</div>
+		</div>
+		<div class="intro">
+			<h2>Текст</h2>
+			<img src="../img/qw.jpg">
+		</div>
+		<div class="text">
+			<span>
+				Зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.Существуют две основные трактовки понятия «текст»: имманентная (расширенная, философски нагруженная) и репрезентативная (более частная).Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры.Репрезентативный — рассмотрение текста как особой формы представления знаний о внешней тексту действительности.В лингвистике термин «текст» используется в широком значении, включая и образцы устной речи.Восприятие текста изучается в рамках лингвистики текста и психолингвистики.Так, например, И. Р. Гальперин определяет текст следующим образом: «это письменное сообщение,объективированное в виде письменного документа, состоящее из ряда высказываний, объединённых разными типами лексической, грамматической и логической связи, имеющее определённый моральный характер, прагматическую установку и соответственно литературно обработанное»
+			</span>
+		</div>
+	</div>
+	<div id="contacts">
+		<center><h5>Обратная связь</h5></center>
+		<form id="form_input">
+			<label for="name">Имя</label><br>
+			<input type="text" placeholder="Введите имя" name="name" id="name"><br>
+			<label for="email">Ваша почта</label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Сообщение</label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Отправить</div>
+		</form>
+	</div>
+	<div id="faq">
+		<div>
+			<span class="title">О нас</span><br>
+			<span class="heading">Кто Вы?</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+		</div>
+		<div>
+			<span class="title">Информация</span><br>
+			<span class="heading">Что это за сервис?</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+		</div>
+		<div>
+			<span class="title">Поддержка</span><br>
+			<span class="heading">Как Вам помочь</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+
+		function openMenu(){
+			document.getElementById("sidebar").classList.toggle('active');
+		}
+		function slowScroll(id) {
+			$('html, body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+		+function() { 
+		std = '../css/main.css'; // стандартные стили 
+		if(getCookie('color_of_style'))
+			{
+				var color=getCookie('color_of_style')
+			}
+			else{var color=std};
+			document.getElementById('changeable_styles').href=color; 
+		}();
+	</script>
+</body>
+</html>
